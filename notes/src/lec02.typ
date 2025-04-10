@@ -35,7 +35,7 @@ $ lambda_n <= (B(v,v) = (v | S v) = sum_(i=1)^n a_i^2 lambda_i) <= lambda_1. qed
 - $limits(max)_(||v||=1)B(v,v) = limits(max)_(v eq.not 0)B(v,v)/((v|v))$, since $B(t v,t v)=t^2B(v,v), (t v|t v) = t^2(v|v).$
 
 *Theorem(Courant-Fischer)* $quad$ Given $S:V->W, S=S^*, forall 1<=k<=n:=dim V: $
-$ lambda_k = min_(U &subset V, \ dim U& = n-k+1) {limits(max)_(||v||=1,v in U) B(u,v)},\
+$ lambda_k = min_(U &subset V, \ dim U& = n-k+1) {limits(max)_(||v||=1,v in U) B(v,v)},\
 lambda_k = max_(U &subset V, \ dim &U = k){min_(||v||=1,v in U) B(v,v)}. $
 
 *Proof* $quad$ Replace $S$ by $-S$: min $<->$ max. Suffices to prove the first equation.
