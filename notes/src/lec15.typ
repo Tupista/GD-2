@@ -41,7 +41,7 @@ This is a equivalence relation on $G:$
 
 *Recall* $quad X$ set, $~$ equivalence relation on $X,$ then $ X\/_~:={~ "equivalence classes in" X} $ where $X=display(union.sq.big_(C in X\/_~) C),$ with quotient map $X->X\/_~.$
 
-Now: $forall g in G,$ set $H g:={h g | h in H}, g H:={g h | h in H}.$ They are the left (resp. right) equivalence class of $g$,and called the right (resp. left) coset of $g.$
+Now: $forall g in G,$ set $H g:={h g | h in H}, g H:={g h | h in H}.$ They are the left (resp. right) equivalence class of $g$, and called the right (resp. left) coset of $g.$
 
 The corresponding quotient sets are $ attach(\\,bl:H) G := G\/_attach(~,b:"left")={"right cosets" H g | g in G}, \ G \/_H:=G\/_attach(~,b:"right")={"left cosets" g H | g in G}. $
 
@@ -79,7 +79,7 @@ Moreover: $ sigma^k=sigma^l thick <==> thick "ord"(sigma) divides abs(k-l), \ si
 
 i.e. $"ord"(sigma)=$ "the minimal period of $sigma^0,sigma^1,sigma^2 dots$"
 
-*Corollary* $quad$ $G$ finite, $sigma in G,$ then $"ord"(sigma) divides abs(G).$
+*Corollary* $quad$ $G$ finite, $sigma in G,$ then $"ord"(sigma) divides abs(G),$ i.e. $forall g in G, g^(abs(G))=1.$
 
 *Corollary* $quad$ If $p:=abs(G)$ is a prime number, then $G$ is cyclic.
 

@@ -99,3 +99,23 @@ Then we say $H$ is a *subgroup* of $G$, in which case $(H,dot)$ is also a group.
 - ${1_G},G$ are subgroups of $G.$
 - $inter.big H_i$ is a subgroup where $H_i subset G:$ subgroup.
 - Center: $Z_G:={z in G | forall g in G, z g=g z}.$ \ Can check: $Z_G$ is a subgroup and $G$ Abelian $<==> Z_G=G.$
+
+*\*Proposition* $quad$ Let $H subset G$ as subset. The following are equivalent:
+
+- $H$ is a subgroup of $G$,
+- $forall a,b in H, a b in H,a^(-1) in H,$
+- $forall a,b in H, a b^(-1) in H.$
+
+*Proof* $quad (1)==>(2), (2)==>(3)$ are obvious.
+
+Take any $h in H, h h^(-1)=1 in H, 1 dot h^(-1)=h^(-1) in H.$
+
+$forall a,b in H, a b=a (b^(-1))^(-1) in H, because b^(-1) in H.$ #h(1fr) $square.stroked$
+
+Given the definition $H K={h k | h in H, k in K},$ the proposition above can be rewritten as 
+
+*Proposition'* $quad$ Let $H subset G.$ The following are equivalent:
+
+- $H$ is a subgroup of $G$,
+- $H^2 subset H, H^(-1) subset H,$
+- $H H^(-1) subset H$ (or equivalently $H^(-1) H subset H$).
