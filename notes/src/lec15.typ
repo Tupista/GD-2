@@ -28,6 +28,28 @@ As conclusion, cyclic groups are (up to $tilde.eq$) $display(cases(ZZ quad &("in
 
 $n!=m ==> ZZ\/n ZZ tilde.eq.not ZZ\/m ZZ$ by counting elements.
 
+In fact, commutative finite groups are only slightly more complex than cyclic groups. We have the following conclusions:
+
+*\*Lemma* $quad$ Let $G$ commutative finite group. \ $forall a,b in G, "ord"(a)=m,"ord"(b)=n,gcd(m,n)=1 ==> "ord"(a b)=m n.$
+
+*Proof* $quad$ Say $t:="ord"(a b).$ $(a b)^(m n)=(a^m)^n (b^n)^m=1 dot 1=1 ==> t divides m n.$ \ Also $(a b)^t=1 ==> a^t = (b^t)^(-1) ==> a^(t n)=(b^(n t))^(-1)=1==>m divides t n ==>m divides t.$ \ Similarly $n divides t ==> m n divides t.$ #h(1fr) $square.stroked$
+
+*\*Lemma* $quad$ $G$ commutative finite group, $exists a in G$ s.t. $forall b in G, "ord"(b) divides "ord"(a).$
+
+*Proof* $quad$ Take $a$ s.t. $forall b in G, "ord"(b)<="ord"(a).$ To show: $"ord"(b) divides "ord"(a).$ 
+
+Prove by contradiction: if $"ord"(b) divides.not "ord"(a),$ then $exists p$ prime, s.t. $p^s || "ord"(a), p^t || "ord"(b), s<t.$  
+
+Assume $"ord"(a)=u p^s, "ord"(b)=v p^t,$ then $"ord"(a^p^s)=u, "ord"(b^v)=p^t,$
+
+$attach(==>,t:"Lem") "ord"(a^p^s b^v)=u p^t>u p^s="ord"(a). $ Contradiction! #h(1fr) $square.stroked$
+
+*\*Proposition* $quad$ Let $G$ commutative finite group. Then $ G "cyclic" <==> forall m in ZZ_(>=1), abs({x in G | x^m=1})<=m. $
+
+*Proof* $quad$ ($==>$) Let $G=angle.l g angle.r, n:=abs(G).$ For $x=g^t, x^m=1 ==> x^gcd(m,n)=1$ since \ $exists u,v in ZZ$ s.t. $u m+v n=gcd(m,n).$ Hence $g^(t gcd(m,n))=1 ==> n divides t dot gcd(m,n)==> display(n/gcd(m,n)) divides t.$ Therefore $x in angle.l g^(n/gcd(m,n)) angle.r,$ while $abs(angle.l g^(n/gcd(m,n)) angle.r)=gcd(m,n)<=m.$
+
+($<==$) From Lemma we can take $a in G$ s.t. $forall b in G, "ord"(b) divides "ord"(a)=:m.$ Hence $forall b in G, b^m=1==> abs({x in G | x^m=1})=n<=m.$ On the other side $m="ord"(a) divides n ==> m=n.$ #h(1fr) $square.stroked$
+
 == $section$ Cosets in a group 
 
 Let $G$ group, $H subset G$ subgroup (sometimes denoted as $lt.eq.slant$).
