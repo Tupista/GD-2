@@ -33,6 +33,16 @@ Also $abs(G x)=(G:H).$
 
 Orbit decomposition: $X=union.sq.big G x ==> abs(X)=sum abs(G x)=sum (G:"Stab"_G (x))$ as cardinal numbers.
 
+A useful conclusion in counting is *Burnside lemma*, which is derived from orbit decomposition.
+
+*Proposition (Burnside)* $quad$ $G$ group, $X$ non-empty set. Define $X^g={x in X | g x=x},$ then $ abs(G\\X) dot abs(G) = sum_(g in G) abs(X^g). $
+
+*Proof* $quad$ Consider a special case where $G arrow.cw.half X$ is transitive. From $"Stab"_(G)(g x)=g "Stab"_G (x) g^(-1)$ we know $abs("Stab"_G (g x))=abs("Stab"_G (x)), forall g in G.$ Hence $ sum_(g in G) abs(X^g)=sum_(x in X) abs("Stab"_G (x))=abs("Stab"_G (x_0))dot underbracket((G:"Stab"_G (x_0)), abs(X)="length of orbit")=abs(G), $ which prove the conclusion since $abs(G\\X)=1.$
+
+For the general case, write $X=union.sq.big G x_i, 1<=i<=n.$ Then $G arrow.cw.half X_i$ is transitive for all $i,$ hence $ sum_(g in G) abs(X^g)=sum_(x in X) abs("Stab"_G (x))=sum_(i=1)^n sum_(x in X_i) abs("Stab"_G (x))=n abs(G)=abs(G\\X) abs(G). $ #h(1fr) $square.stroked$
+
+In other words, each element in $G$ has "around $abs(G\\X)$" fixed points in $X.$
+
 *Remark* $quad$ Given $G$ group, $X$ non-empty set, we have $ {a:G times X->X, "action" G arrow.cw.half X} <-->{"homomorphisms" A:G->S_X}, $ where $S_X:={"bijections" X->X}.$
 
 Indeed: to give $a:G times X->X$ amounts to $A:G->{"maps" X->X}$ s.t. $A(g)(x)=a(g,x).$
@@ -82,7 +92,6 @@ Hence $sigma$ acts on $C_1 union.sq dots union.sq C_m$ as $(a_(1,1) thick dots t
 
 *Easy observations*
 - $"ord"(sigma)=lcm(l_1,dots,l_m).$ \ $because forall k in ZZ, sigma^k = (a_(1,1) thick dots thick a_(i,l_1))^k dots (a_(m,1) thick dots thick a_(m,l_m))^k,$ $ sigma^k=id_n &<==> (a_(i,1) thick dots thick a_(i,l_i))^k=id, thick forall 1<=i<=m \ &<==> l_i divides k, forall i. $ #h(1fr)
-#pagebreak()
 - $"sgn"(sigma)=(-1)^(sum (l_i-1)), because "sgn":S_n->{plus.minus 1}$ is a homomorphism $==>$ suffices to show $ "sgn"((a_1 thick dots thick a_l))=(-1)^(l-1). $ 
  - $l=2$ case: $"sgn"((a_1 thick a_2))=-1.$
  - $l>2$ case: $(a_1 thick dots thick a_l)=(a_1 thick a_l)(a_1 thick dots thick a_(l-1)).$ Check inductively. #h(1fr) $square.stroked$
@@ -115,7 +124,7 @@ Equivalently:
 - $g H g^(-1) subset H, forall g in G, because$ Put $g^(-1) ==> g^(-1) H g subset H ==> H subset g H g^(-1).$
 - $g H=H g, forall g in G.$
 - $g H subset H g, forall g in G.$
-
+#pagebreak()
 *Examples*
 - $G$ abelian $<==> forall H lt.eq.slant G, H lt.tri G.$
 - ${1},G lt.tri G.$
